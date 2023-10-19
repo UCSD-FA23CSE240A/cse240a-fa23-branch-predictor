@@ -5,7 +5,6 @@
 //========================================================//
 
 #define _GNU_SOURCE
-#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -27,8 +26,8 @@ usage()
   fprintf(stderr," --verbose    Print predictions on stdout\n");
   fprintf(stderr," --<type>     Branch prediction scheme:\n");
   fprintf(stderr,"    static\n"
-                 "    gshare:<# ghistory>\n"
-                 "    tournament:<# ghistory>:<# lhistory>:<# index>\n"
+                 "    gshare\n"
+                 "    tournament\n"
                  "    custom\n");
 }
 
