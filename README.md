@@ -13,7 +13,9 @@ Here are some papers that you can refer to for the custom design:
 ### [Perceptron](https://www.cs.utexas.edu/~lin/papers/hpca01.pdf)
 ### [YAGS](https://safari.ethz.ch/digitaltechnik/spring2021/lib/exe/fetch.php?media=mudge_yags.pdf)
 
-You can of course search on your own and implement any other branch predictor you want. 
+You can of course search on your own and implement any other branch predictor you want.
+
+Notice you're given all information of the branch/jump: Branch Address, Branch Target, (Taken-Not taken), (Conditional-Unconditional), (Call-Not Call), (Ret-Not Ret), (Direct-NotDirect). You can use all of these to decide how to train your predictor and make prediction (modifying arguments of `train_predictor` and `make_prediction`), but we will only check the accuracy of the prediction on conditional branches.
 
 ## Academic Integrity
 
