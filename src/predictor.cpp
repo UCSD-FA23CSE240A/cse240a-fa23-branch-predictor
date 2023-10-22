@@ -60,8 +60,7 @@ void init_gshare()
   ghistory = 0;
 }
 
-uint8_t
-gshare_predict(uint32_t pc)
+uint8_t gshare_predict(uint32_t pc)
 {
   // get lower ghistoryBits of pc
   uint32_t bht_entries = 1 << ghistoryBits;
@@ -109,6 +108,7 @@ void train_gshare(uint32_t pc, uint8_t outcome)
     break;
   default:
     printf("Warning: Undefined state of entry in GSHARE BHT!\n");
+    break;
   }
 
   // Update history register
@@ -125,11 +125,14 @@ void init_predictor()
   switch (bpType)
   {
   case STATIC:
+    break;
   case GSHARE:
     init_gshare();
     break;
   case TOURNAMENT:
+    break;
   case CUSTOM:
+    break;
   default:
     break;
   }
@@ -139,8 +142,7 @@ void init_predictor()
 // Returning TAKEN indicates a prediction of taken; returning NOTTAKEN
 // indicates a prediction of not taken
 //
-uint32_t
-make_prediction(uint32_t pc, uint32_t target, uint32_t outcome, uint32_t condition, uint32_t call, uint32_t ret, uint32_t direct)
+uint32_t make_prediction(uint32_t pc, uint32_t target, uint32_t direct)
 {
 
   // Make a prediction based on the bpType
@@ -151,7 +153,9 @@ make_prediction(uint32_t pc, uint32_t target, uint32_t outcome, uint32_t conditi
   case GSHARE:
     return gshare_predict(pc);
   case TOURNAMENT:
+    return NOTTAKEN;
   case CUSTOM:
+    return NOTTAKEN;
   default:
     break;
   }
@@ -172,10 +176,13 @@ void train_predictor(uint32_t pc, uint32_t target, uint32_t outcome, uint32_t co
     switch (bpType)
     {
     case STATIC:
+      return;
     case GSHARE:
       return train_gshare(pc, outcome);
     case TOURNAMENT:
+      return;
     case CUSTOM:
+      return;
     default:
       break;
     }
