@@ -67,4 +67,9 @@ uint32_t make_prediction(uint32_t pc, uint32_t target, uint32_t direct);
 //
 void train_predictor(uint32_t pc, uint32_t target, uint32_t outcome, uint32_t condition, uint32_t call, uint32_t ret, uint32_t direct);
 
+// Please add your code below, and DO NOT MODIFY ALL THE CODE ABOVE
+// 
+
+
+
 #endif
