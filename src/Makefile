@@ -1,5 +1,5 @@
-CC=gcc
-OPTS=-g -std=c99 -Werror
+CC=g++
+OPTS=-g -Werror
 
 all: main.o predictor.o
 	$(CC) $(OPTS) -lm -o predictor main.o predictor.o

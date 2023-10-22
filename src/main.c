@@ -4,7 +4,6 @@
 //  Students need to implement various Branch Predictors  //
 //========================================================//
 
-#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
