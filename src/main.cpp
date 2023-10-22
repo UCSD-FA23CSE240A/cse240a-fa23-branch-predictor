@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
     {
       num_branches++;
       // Make a prediction and compare with actual outcome
-      uint32_t prediction = make_prediction(pc, target, outcome, condition, call, ret, direct);
+      uint32_t prediction = make_prediction(pc, target, direct);
       if (prediction != outcome)
       {
         mispredictions++;
