@@ -50,11 +50,11 @@ If needed, we also provide a shell script for you to update your repo from the s
 ```shell
 ./pull_update.sh
 ```
-This will back up all the content in ./src into ./src_backup, and reset the whole project (except ./src_backup and its content) to be the same as updated stater repo. Sorry for the potential extra workload brought by this and we will try to avoid using it.
+This will back up all the content in ./src into ./src_backup, and reset the whole project (except ./src_backup and its content) to be the same as updated starter repo. Sorry for the potential extra workload brought by this and we will try to avoid using it.
 
 ## What should you edit?
 
-You need to edit predictor.c and potentially predictor.h for the most part. Add your functions and make sure they are referenced correctly so that your code runs perfectly. Please do not edit any files other than predictor.c and predictor.h.
+You need to edit predictor.c and potentially predictor.h for the most part. Add your functions and make sure they are referenced correctly so that your code runs perfectly. Please do not edit any file other than predictor.c and predictor.h.
 
 ## Deliverables
 
